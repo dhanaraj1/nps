@@ -58,7 +58,12 @@ employee_status varchar(10) "fullday half day or available" index,
 created_at timestamp default CURRENT_TIMESTAMP
 )
 
+CREATE table if not exists  employee_travelling_allowance(
+employee_travelling_allowance_id BIGINT auto_increment NOT null primary key,
+employee_travelling_allowance_amount decimal(10,4) not null,
+employee_travelling_allowance_complain_id int fk,
 
+)
 
 
 
